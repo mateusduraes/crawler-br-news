@@ -18,6 +18,7 @@
   "homepage": "https://github.com/mateusduraes/crawler-br-news#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
+    "prettyjson": "^1.2.1",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
   }
