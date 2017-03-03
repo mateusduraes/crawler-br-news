@@ -1,0 +1,24 @@
+{
+  "name": "crawler-news",
+  "version": "1.0.0",
+  "description": "A node crawler to get brazilian news in main websites.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mateusduraes/crawler-br-news.git"
+  },
+  "author": "Mateus Duraes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mateusduraes/crawler-br-news/issues"
+  },
+  "homepage": "https://github.com/mateusduraes/crawler-br-news#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}
