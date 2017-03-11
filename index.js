@@ -13,13 +13,9 @@ let getNews = html => {
 	return arr
 }
 
+
 requestPromise('http://www.em.com.br/')
 	.then(getNews)
 	.then(prettyjson.render)
 	.then(console.log)
-
-	
-	
-
-
 
