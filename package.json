@@ -4,7 +4,9 @@
   "description": "A node crawler to get brazilian news in main websites.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "lint": "tslint -p tslint.json"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,12 @@
     "prettyjson": "^1.2.1",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.47",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.2.3",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
   }
 }

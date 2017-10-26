@@ -1,0 +1,15 @@
+{
+    "files": [
+        "src/**.*"
+    ],
+    "compileOnSave": true,
+    "compilerOptions": {
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "target": "es5"
+    }
+}
