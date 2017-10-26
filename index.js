@@ -1,21 +1,35 @@
-const requestPromise = require('request-promise')
-const cheerio = require('cheerio')
-const prettyjson = require('prettyjson')
+#!/usr/bin/env node
 
-let getNews = html => {
-	let $ = cheerio.load(html)
-	let arr = []
-	$('[data-destaque="titulo"]')
-		.each((index, item) => arr.push({
-			title: $(item).text(),
-			link : $(item).closest('[data-destaque="link"]').attr('href')
-		}))
-	return arr
+const inquirer    = require('inquirer');
+
+const em    = require('./em');
+const estadao    = require('./estadao');
+const globo    = require('./globo');
+const availableWebsites = ['http://www.em.com.br/', 'http://www.g1.globo.com/', 'http://www.estadao.com.br/'];
+
+function initialize() {
+    let questions = [
+        {
+            type: 'list',
+            name: 'domain',
+            message: 'Please Select Website?:',
+            choices: availableWebsites,
+            default: availableWebsites[0]
+        }
+    ];
+
+    inquirer.prompt(questions)
+        .then(function(answers) {
+            if(answers.domain === availableWebsites[0]){
+                em.get();
+            }
+            else if(answers.domain === availableWebsites[1]){
+                globo.get();
+            }
+            else if(answers.domain === availableWebsites[2]){
+                estadao.get();
+            }
+        });
 }
 
-
-requestPromise('http://www.em.com.br/')
-	.then(getNews)
-	.then(prettyjson.render)
-	.then(console.log)
-
+initialize();

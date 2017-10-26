@@ -5,11 +5,16 @@
   "main": "index.js",
   "scripts": {
     "precommit": "tslint -c tslint.json *.ts",
-    "prepush": "tslint -c tslint.json *.ts"
+    "prepush": "tslint -c tslint.json *.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mateusduraes/crawler-br-news.git"
+  },
+  "bin": {
+    "brnews": "./index.js"
   },
   "author": "Mateus Duraes",
   "license": "ISC",
@@ -19,6 +24,7 @@
   "homepage": "https://github.com/mateusduraes/crawler-br-news#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
+    "inquirer": "^3.3.0",
     "prettyjson": "^1.2.1",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
