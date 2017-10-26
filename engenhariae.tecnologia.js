@@ -1,11 +1,11 @@
 const requestPromise = require('request-promise')
 const cheerio = require('cheerio')
 const prettyjson = require('prettyjson')
-$('.td-module-title').children().each((index, item) => console.log(item.innerText))
+
 let getNews = html => {
 	let $ = cheerio.load(html)
 	let arr = []
-	$('.td-module-title')
+	$('.td-module-title').children()
 		.each((index, item) => arr.push({
 			title: $(item).text()			
 		}))
