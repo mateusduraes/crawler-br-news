@@ -12,7 +12,11 @@ let getNews = html => {
 	return arr
 }
 
-requestPromise('http://www.estadao.com.br')
-	.then(getNews)
-	.then(prettyjson.render)
-	.then(console.log)
+module.exports = {
+    get: function () {
+        requestPromise('http://www.estadao.com.br/')
+            .then(getNews)
+            .then(prettyjson.render)
+            .then(console.log)
+    }
+}
