@@ -1,4 +1,4 @@
-# crawler-br-news
+# :newspaper:  crawler-br-news
 
 A crawler to get news from a brazilian website.
 
@@ -21,6 +21,7 @@ The output will look like the below image.
 
 
 ### ToDO List
+
 
 * Install typescript and tslint in project.
 * Make it a command line interface.
