@@ -17,3 +17,11 @@ $ npm install
 The output will be like the below image
 
 ![Output image](/output.png)
+
+
+
+### ToDO List
+
+* Install typescript and tslint in project
+* Make it a command line interface
+* Write tests
