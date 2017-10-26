@@ -25,3 +25,4 @@ The output will be like the below image
 * Install typescript and tslint in project
 * Make it a command line interface
 * Write tests
+* Install husky (git hooks) and configurate precommit and prepush with tslint / 'run tests'.
