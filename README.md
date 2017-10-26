@@ -1,4 +1,4 @@
-# crawler-br-news
+# :newspaper:  crawler-br-news
 
 A crawler to get news from a brazilian website.
 
