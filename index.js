@@ -1,21 +1,19 @@
-const requestPromise = require('request-promise')
-const cheerio = require('cheerio')
-const prettyjson = require('prettyjson')
+const requestPromise = require("request-promise");
+const cheerio = require("cheerio");
+const prettyjson = require("prettyjson");
 
 let getNews = html => {
-	let $ = cheerio.load(html)
-	let arr = []
+	let $ = cheerio.load(html);
+	let arr = [];
 	$('[data-destaque="titulo"]')
 		.each((index, item) => arr.push({
+			link : $(item).closest('[data-destaque="link"]').attr("href"),
 			title: $(item).text(),
-			link : $(item).closest('[data-destaque="link"]').attr('href')
-		}))
-	return arr
-}
+		}));
+	return arr;
+};
 
-
-requestPromise('http://www.em.com.br/')
+requestPromise("http://www.em.com.br/")
 	.then(getNews)
 	.then(prettyjson.render)
-	.then(console.log)
-
+	.then(console.log);
