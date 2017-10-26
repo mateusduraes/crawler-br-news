@@ -22,8 +22,8 @@ The output will be like the below image
 
 ### ToDO List
 
-* Install typescript and tslint in project
+* [Install typescript and tslint in project](https://github.com/mateusduraes/crawler-br-news/issues/1)
+* [Install husky (git hooks) and configurate precommit and prepush with tslint / 'run tests'.](https://github.com/mateusduraes/crawler-br-news/issues/2)
+* [Add more brazilian websites](https://github.com/mateusduraes/crawler-br-news/issues/3)
 * Make it a command line interface
 * Write tests
-* Install husky (git hooks) and configurate precommit and prepush with tslint / 'run tests'.
-* Add more brazilian websites
