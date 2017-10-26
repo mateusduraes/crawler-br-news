@@ -26,3 +26,4 @@ The output will be like the below image
 * Make it a command line interface
 * Write tests
 * Install husky (git hooks) and configurate precommit and prepush with tslint / 'run tests'.
+* Add more brazilian websites
