@@ -1,16 +1,16 @@
-const requestPromise = require('request-promise')
-const cheerio = require('cheerio')
-const prettyjson = require('prettyjson')
+const requestPromise = require("request-promise");
+const cheerio = require("cheerio");
+const prettyjson = require("prettyjson");
 
 let getNews = html => {
-	let $ = cheerio.load(html)
-	let arr = []
+	let $ = cheerio.load(html);
+	let arr = [];
 	$('section[class*="block-saiba-agora-"] h3')
 		.each((index, item) => arr.push({
-			title: $(item).text()
-		}))
-	return arr
-}
+			title: $(item).text(),
+		}));
+	return arr;
+};
 
 module.exports = {
     get: function () {
