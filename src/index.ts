@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import * as inquirer from 'inquirer';
+import * as _ from 'lodash';
+import { crawlers } from './loader';
+import { ICrawlerInfo } from './types/crawler-info';
 
-const em = require('./crawlers/em');
-const estadao = require('./crawlers/estadao');
-const globo = require('./crawlers/globo');
-const availableWebsites = ['http://www.em.com.br/', 'http://www.g1.globo.com/', 'http://www.estadao.com.br/'];
+const availableWebsites = crawlers.map(crawler => crawler.url);
 
 function initialize() {
     let questions = [
@@ -19,13 +19,8 @@ function initialize() {
 
     inquirer.prompt(questions)
         .then((answers) => {
-            if (answers.domain === availableWebsites[0]) {
-                em.get();
-            } else if (answers.domain === availableWebsites[1]) {
-                globo.get();
-            } else if (answers.domain === availableWebsites[2]) {
-                estadao.get();
-            }
+            const selectedCrawler: ICrawlerInfo = _.find(crawlers, crawler => crawler.url === answers.domain);
+            selectedCrawler.get();
         });
 }
 

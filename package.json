@@ -26,8 +26,12 @@
   },
   "homepage": "https://github.com/mateusduraes/crawler-br-news#readme",
   "dependencies": {
+    "@types/lodash": "^4.14.80",
     "cheerio": "^0.22.0",
+    "glob": "^7.1.2",
     "inquirer": "^3.3.0",
+    "lodash": "^4.17.4",
+    "path": "^0.12.7",
     "prettyjson": "^1.2.1",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"

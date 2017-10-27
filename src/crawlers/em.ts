@@ -1,6 +1,9 @@
 import * as cheerio from 'cheerio';
 import * as prettyjson from 'prettyjson';
 import * as requestPromise from 'request-promise';
+import { ICrawlerInfo } from './../types/crawler-info';
+
+const url: string = 'http://www.em.com.br/';
 
 let getNews = html => {
     let $ = cheerio.load(html);
@@ -13,13 +16,14 @@ let getNews = html => {
     return arr;
 };
 
-const get = () => {
-    requestPromise('http://www.em.com.br/')
-        .then(getNews)
-        .then(prettyjson.render)
-        .then(console.log);
+const crawlerInfo: ICrawlerInfo = {
+    get: () => {
+        requestPromise(url)
+            .then(getNews)
+            .then(prettyjson.render)
+            .then(console.log);
+    },
+    url,
 };
 
-export { get };
-
-
+export default crawlerInfo;

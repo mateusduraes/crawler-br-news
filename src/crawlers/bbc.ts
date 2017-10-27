@@ -1,8 +1,9 @@
 import * as cheerio from 'cheerio';
 import * as prettyjson from 'prettyjson';
 import * as requestPromise from 'request-promise';
+import { ICrawlerInfo } from './../types/crawler-info';
 
-const bbcUrl = 'http://bbc.com';
+const url: string = 'http://bbc.com';
 
 let getNews = html => {
 	let $ = cheerio.load(html);
@@ -10,16 +11,20 @@ let getNews = html => {
 	$('a.title-link')
 		.each((index, item) => arr.push({
 			title: $(item).text().trim(),
-			link : bbcUrl + $(item).attr('href'),
+			link : url + $(item).attr('href'),
 		}));
 	return arr;
 };
 
-const get = () => {
-	requestPromise(bbcUrl + '/portuguese/brasil')
-		.then(getNews)
-		.then(prettyjson.render)
-		.then(console.log);
+
+const crawlerInfo: ICrawlerInfo = {
+	get: () => {
+		requestPromise(url + '/portuguese/brasil')
+			.then(getNews)
+			.then(prettyjson.render)
+			.then(console.log);
+	},
+	url,
 };
 
-export { get };
+export default crawlerInfo;
