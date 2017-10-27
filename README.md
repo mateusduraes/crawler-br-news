@@ -22,7 +22,10 @@ $ npm run start
 
 The output will look like the below image.
 
-![Output image](/output.png)
+<p align="center">
+![Output image](/output.gif)
+</p>
+
 
 
 
