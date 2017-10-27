@@ -29,9 +29,5 @@ The output will look like the below image.
 
 ### ToDO List
 
-
-* Install typescript and tslint in project.
 * Make it a command line interface.
 * Write tests.
-* Install husky (git hooks) and configurate precommit and prepush with tslint / 'run tests'.
-* Add more brazilian websites.
