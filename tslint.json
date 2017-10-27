@@ -1,13 +1,36 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:latest"
-    ],
-    "jsRules": {
-        "indent": [true, "tabs"]
-    },
+    "extends": "tslint:recommended",
     "rules": {
-        "indent": [true, "tabs"]
+        "max-line-length": {
+            "options": [120]
+        },
+        "new-parens": true,
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-conditional-assignment": true,
+        "indent": false,
+        "quotemark": [true, "single"],
+        "object-literal-sort-keys": false,
+        "arrow-parens": false,
+        "prefer-const": false,
+        "no-require-imports": false,
+        "no-var-requires": false,
+        "no-consecutive-blank-lines": false,
+        "no-console": {
+            "severity": "warning",
+            "options": [
+                "debug",
+                "info",
+                "log",
+                "time",
+                "timeEnd",
+                "trace"
+            ]
+        }
     },
-    "rulesDirectory": []
+    "jsRules": {
+        "max-line-length": {
+            "options": [120]
+        }
+    }
 }

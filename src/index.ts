@@ -1,10 +1,9 @@
 #!/usr/bin/env node
+import * as inquirer from 'inquirer';
 
-const inquirer    = require('inquirer');
-
-const em    = require('./em');
-const estadao    = require('./estadao');
-const globo    = require('./globo');
+const em = require('./crawlers/em');
+const estadao = require('./crawlers/estadao');
+const globo = require('./crawlers/globo');
 const availableWebsites = ['http://www.em.com.br/', 'http://www.g1.globo.com/', 'http://www.estadao.com.br/'];
 
 function initialize() {
@@ -14,19 +13,17 @@ function initialize() {
             name: 'domain',
             message: 'Please Select Website?:',
             choices: availableWebsites,
-            default: availableWebsites[0]
-        }
+            default: availableWebsites[0],
+        },
     ];
 
     inquirer.prompt(questions)
-        .then(function(answers) {
-            if(answers.domain === availableWebsites[0]){
+        .then((answers) => {
+            if (answers.domain === availableWebsites[0]) {
                 em.get();
-            }
-            else if(answers.domain === availableWebsites[1]){
+            } else if (answers.domain === availableWebsites[1]) {
                 globo.get();
-            }
-            else if(answers.domain === availableWebsites[2]){
+            } else if (answers.domain === availableWebsites[2]) {
                 estadao.get();
             }
         });

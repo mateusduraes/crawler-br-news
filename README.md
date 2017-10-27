@@ -12,6 +12,7 @@ To run this project, just run the below commands. Assuming you have nodejs insta
 $ git clone https://github.com/mateusduraes/crawler-br-news.git
 $ cd crawler-br-news
 $ npm install
+$ npm run build
 ```
 
 ### How to execute crawler-br-news?
