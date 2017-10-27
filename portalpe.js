@@ -11,7 +11,8 @@ let getNews = html => {
 		}))
 	return arr
 }
-        requestPromise('http://portalpe10.com.br/')
-            .then(getNews)
-            .then(prettyjson.render)
-            .then(console.log)
+
+requestPromise('http://portalpe10.com.br/')
+	.then(getNews)
+	.then(prettyjson.render)
+	.then(console.log)

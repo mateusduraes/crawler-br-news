@@ -4,10 +4,11 @@
   "description": "A node crawler to get brazilian news in main websites.",
   "main": "index.js",
   "scripts": {
-    "precommit": "tslint -c tslint.json *.ts",
-    "prepush": "tslint -c tslint.json *.ts",
+    "precommit": "npm run lint",
+    "prepush": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "tslint -c tslint.json *.ts"
   },
   "repository": {
     "type": "git",
