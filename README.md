@@ -17,7 +17,7 @@ $ npm install
 ### How to execute crawler-br-news?
 
 ```sh
-$ npm run start
+$ npm run start:build
 ```
 
 The output will look like the below image.
