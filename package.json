@@ -7,8 +7,9 @@
     "precommit": "npm run lint",
     "prepush": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "lint": "tslint -c tslint.json *.ts"
+    "start": "npm run build && node dist/index.js",
+    "lint": "tslint -p tsconfig.json --force",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,10 @@
     "request-promise": "^4.1.1"
   },
   "devDependencies": {
-    "husky": "^0.14.3",
+    "@types/cheerio": "^0.22.3",
+    "@types/node": "^8.0.47",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.2.3",
     "tslint": "^5.8.0",
     "typescript": "^2.5.3"
   }
