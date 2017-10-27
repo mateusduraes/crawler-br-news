@@ -22,7 +22,7 @@ $ npm run start:build
 
 The output will look like the below image.
 
-<img align="center" src="output.gif" alt="Gif showing project">
+<img align="center" src="lib.gif" alt="Gif showing project">
 
 
 
