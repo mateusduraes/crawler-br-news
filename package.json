@@ -1,5 +1,5 @@
 {
-  "name": "crawler-news",
+  "name": "crawler-br-news",
   "version": "1.0.0",
   "description": "A node crawler to get brazilian news in main websites.",
   "main": "index.js",
