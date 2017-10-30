@@ -29,5 +29,4 @@ The output will look like the below image.
 
 ### ToDO List
 
-* Make it a command line interface.
 * Write tests.
