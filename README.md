@@ -20,7 +20,7 @@ $ npm install
 $ npm run start:build
 ```
 
-The output will look like the below image.
+The output will look like the below image. :smile:
 
 <img align="center" src="lib.gif" alt="Gif showing project">
 
