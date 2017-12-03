@@ -24,9 +24,3 @@ The output will look like the below image. :smile:
 
 <img align="center" src="lib.gif" alt="Gif showing project">
 
-
-
-
-### ToDO List
-
-* Write tests.
