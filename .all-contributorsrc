@@ -62,6 +62,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "isaniomoraes",
+      "name": "Isânio Moraes",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3224086?v=4",
+      "profile": "https://isanio.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
