@@ -26,6 +26,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "teliz",
+      "name": "Pablo Teliz",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5104527?v=4",
+      "profile": "https://github.com/teliz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
