@@ -2,6 +2,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors)
 
 A crawler to get news from a brazilian website.
+
 This project was created just to learn and implement a crawler in NodeJs.
 
 ### How to install crawler-br-news?
